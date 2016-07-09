@@ -1,0 +1,5 @@
+Credentials cache: API:18410
+        Principal: jlasne@42.FR
+
+  Issued                Expires               Principal
+Jul  4 13:11:22 2016  Jul 11 13:11:22 2016  krbtgt/42.FR@42.FR
