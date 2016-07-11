@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/11 15:40:23 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/11 15:48:11 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/11 23:54:04 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,12 @@ char	*ft_strcpy(char *dest, char *src)
 	isrc = ft_strlen(src);
 	i = 0;
 	j = idest;
-
-	while(src[i] != '\0')
+	while (src[i] != '\0')
 	{
 		dest[j] = src[i];
 		j++;
 		i++;
 	}
 	dest[i] = '\n';
-
+	return(&*dest);
 }
