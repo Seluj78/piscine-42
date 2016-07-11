@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/08 22:40:16 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/09 16:21:27 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/10 15:27:23 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	ft_write_square(int x, int y, int x2, int y2)
 		ft_write_hb(x);
 		y = y2;
 		x = x2;
-		ft_write_middle(x, y, y2);
+		ft_write_middle(x, y, x2);
 		x = x2;
 		ft_write_hb(x);
 	}
@@ -96,7 +96,7 @@ int		colle(int x, int y)
 	if ((y == 1) && (a != 0))
 	{
 		x = x2;
-		ft_putchar('i');
+		ft_putchar('o');
 		while ((x - 2) > 0)
 		{
 			ft_putchar('-');
@@ -104,5 +104,6 @@ int		colle(int x, int y)
 		}
 		ft_putchar('o');
 	}
+	ft_write_square(x, y, x2, y2);
 	return (0);
 }

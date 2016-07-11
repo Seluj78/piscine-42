@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/11 06:03:58 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/11 07:21:32 by jlasne           ###   ########.fr       */
+/*   Created: 2016/07/11 09:15:08 by jlasne            #+#    #+#             */
+/*   Updated: 2016/07/11 11:29:03 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+void	ft_putchar(char c)
 {
-	int i;
+	write(1, &c, 1);
+}
 
-	i = 0;
-	while (src[i] != '\0')
+void	ft_putnbr(int nb)
+{
+	if ( nb < 0)
 	{
-		dest[i] = src[i];
-		i++;
+		nb = nb * -1;
+		ft_putchar('-');
 	}
-	dest[i] = '\0';
-	return (dest);
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else if (nb <= 9 && nb >= 0)
+	{
+		ft_putchar(nb + '0');
+	}
 }

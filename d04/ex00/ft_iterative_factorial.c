@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/08 09:12:55 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/08 13:11:10 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/10 18:24:26 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,13 @@ int ft_iterative_factorial(int nb)
 
 	i = 1;
 	result = 1;
-	if (nb > 12 || nb <= 0)
+	if (nb > 12)
 	{
 	return (0);
+	}
+	if (nb <= 0)
+	{
+	return (1);
 	}
 
 	while (nb != 0)

@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/08 22:34:06 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/10 15:26:02 by jlasne           ###   ########.fr       */
+/*   Created: 2016/07/11 09:08:00 by jlasne            #+#    #+#             */
+/*   Updated: 2016/07/11 09:22:09 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		colle(int x, int y);
+#include <unistd.h>
 
-int		main(void)
+void	ft_putchar(char c)
 {
-	colle(50, 25);
-	return (0);
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int index;
+
+	index = 0;
+	while (str[index] != '\n')
+	{
+		ft_putchar(str[index]);
+		index++;
+	}
 }
