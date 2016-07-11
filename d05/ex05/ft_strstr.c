@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/11 10:56:22 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/11 12:31:31 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/11 12:55:56 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,9 @@ char	*ft_strstr(char *str, char *to_find)
 		if (str[i] != to_find[i] && str[j] != to_find[j])
 		{
 			return (&to_find[i]);
-			i++;
-			j++;
 		}
-		else
-			return ("NULL");
+		i++;
+		j++;
 	}
 	return ("NULL");
 }
@@ -58,7 +56,7 @@ int		main(void)
 {
 	char *c;
 
-	c = ft_strstr("abcdefg", "def");
+	c = ft_strstr("abcdefg", "jkl");
 	ft_putstr(c);
 	return (0);
 }

@@ -1,47 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/11 12:34:29 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/11 12:54:59 by jlasne           ###   ########.fr       */
+/*   Created: 2016/07/11 13:11:17 by jlasne            #+#    #+#             */
+/*   Updated: 2016/07/11 13:23:57 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+char 	*ft_strupcase(char *str)
 {
 	int i;
-	int j;
 
 	i = 0;
-	j = 0;
-	while (str[i] != '\0')
+	while(str[i] != '\n')
 	{
+		str[i] += 32;
 		i++;
-		j++;
 	}
-	return (j);
-}
-
-int ft_strcmp(char *s1, char *s2)
-{
-		int i;
-		int j;
-
-		i = ft_strlen(s1);
-		j = ft_strlen(s2);
-		if (i > j)
-		{
-			return (1);
-		}
-		else if (i = j)
-		{
-			return (0);
-		}
-		else if (i < j)
-		{
-			return (-1);
-		}
+	return (*str);
 }
