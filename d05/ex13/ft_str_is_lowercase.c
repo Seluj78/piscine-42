@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/11 14:50:05 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/11 14:51:43 by jlasne           ###   ########.fr       */
+/*   Created: 2016/07/11 15:17:39 by jlasne            #+#    #+#             */
+/*   Updated: 2016/07/11 15:21:04 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_numeric(char *str)
+int		ft_str_is_lowercase(char *str)
 {
 	int i;
 
-	i = 0;
-	if (str[i] = '\0')
+	i = 0
+	while (str[i] != 0)
 	{
-		return (1);
-	}
-	while(str[i] != 0)
-	{
-		if (str[i] < 48 || str[i] > 67)
+		if (str[i] < 97 || str[i] > 122)
 		{
 			return (0);
 		}
-		i++;
 	}
 	return (1);
 }
