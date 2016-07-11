@@ -10,25 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != 0)
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
-}
-
 char	*ft_strstr(char *str, char *to_find)
 {
 	int i;
@@ -50,13 +31,4 @@ char	*ft_strstr(char *str, char *to_find)
 		j++;
 	}
 	return ("NULL");
-}
-
-int		main(void)
-{
-	char *c;
-
-	c = ft_strstr("abcdefg", "jkl");
-	ft_putstr(c);
-	return (0);
 }
