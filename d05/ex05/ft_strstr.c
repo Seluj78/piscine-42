@@ -6,29 +6,31 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/11 10:56:22 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/11 12:55:56 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/12 22:05:14 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int i;
-	int j;
+	char	*tmp;
+	char	*a;
+	char	*b;
 
-	i = 0;
-	j = 1;
-	if (to_find[0] == '\0')
-	{
+	if (*to_find == 0)
 		return (str);
-	}
-	while (str[i])
+	tmp = str;
+	while (*tmp)
 	{
-		if (str[i] != to_find[i] && str[j] != to_find[j])
+		a = tmp;
+		b = to_find;
+		while (*tmp && *b && *tmp == *b)
 		{
-			return (&to_find[i]);
+			++tmp;
+			++b;
 		}
-		i++;
-		j++;
+		if (*b == 0)
+			return (a);
+		tmp = a + 1;
 	}
-	return ("NULL");
+	return (0);
 }

@@ -6,11 +6,11 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/14 20:47:06 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/14 20:49:25 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/15 16:02:44 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 # define FT_ABS_H
-# define ABS(Value) (((x) < 0) ? -(x) : (x))
+# define ABS(x) (((x) < 0) ? -(x) : (x))
 #endif

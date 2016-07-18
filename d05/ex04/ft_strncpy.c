@@ -6,52 +6,24 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/11 07:22:07 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/11 12:53:19 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/12 22:04:52 by jlasne           ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */i
-
-int		ft_strlen(char *str)
-{
-	int i;
-	int j;
-
-	i = 0;
-	j = 0;
-	while (str[i] != 0)
-	{
-		i++;
-		j++;
-	}
-	return (j);
-}
+/* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int i;
-	int j;
+	unsigned int i;
 
 	i = 0;
-	j = ft_strlen(src);
-	if (j < n)
-	{
-		while(src[i] != '\0')
-		{
-			dest[i] = src[i];
-			i++;
-			n--;
-		}
-		while(n >= 0)
-		{
-			dest[i] = '\0';
-			i++
-		}
-
-	}
-	while (n > 0)
+	while (src[i] && i < n)
 	{
 		dest[i] = src[i];
 		i++;
-		n--;
 	}
-	dest[i] = '\0';
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }

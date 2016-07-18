@@ -6,19 +6,26 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/11 13:24:41 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/11 14:12:58 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/12 21:06:42 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int i;
 
 	i = 0;
-	while(str[i] != '\n')
+	while (str[i] != '\0')
 	{
-		str[i] -= 32;
-		i++;
+		if (str[i] <= 'Z' && str[i] >= 'A')
+		{
+			str[i] += 32;
+			i++;
+		}
+		else
+		{
+			i++;
+		}
 	}
-	return (*str);
+	return (str);
 }

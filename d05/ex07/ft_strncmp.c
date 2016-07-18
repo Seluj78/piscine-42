@@ -5,44 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/07/11 12:57:41 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/11 13:10:40 by jlasne           ###   ########.fr       */
+/*   Created: 2016/07/12 20:38:29 by jlasne            #+#    #+#             */
+/*   Updated: 2016/07/18 02:37:12 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str, unsigned int n)
+int		ft_strncmp(char *s1, char *s2, unsigned int nb)
 {
-	int i;
-	int j;
+	unsigned int i;
 
 	i = 0;
-	j = 0;
-	while (str[i] != '\0' || n > 0)
+	while (i < nb)
 	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		if (s1[i] == '\0' && s2[i] == '\0')
+			return (0);
 		i++;
-		j++;
-		n--;
 	}
-	return (j);
-}
-
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	int i;
-	int j;
-
-	i = ft_strlen(s1, n);
-	j = ft_strlen(s2, n);
-	if (i > j)
-	{
-		return (1);
-	}
-	else if (i = j)
-	{
-		return (0);
-	}
-	else if (i < j)
-	{
-		return (-1);
-	}
+	return (0);
 }

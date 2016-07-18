@@ -6,11 +6,11 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/11 10:27:25 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/12 01:18:07 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/12 17:57:50 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		returnfunc(int neg, int nbr)
+int		ft_returnfunc(int neg, int nbr)
 {
 	if (neg == 1)
 	{
@@ -23,7 +23,7 @@ int		returnfunc(int neg, int nbr)
 	return (nbr);
 }
 
-int		whilefunc(const char *str, int i)
+int		ft_whilefunc(const char *str, int i)
 {
 	while ((str[i] == '\n') || (str[i] == '\t') || (str[i] == '\v') ||
 			(str[i] == ' ') || (str[i] == '\f') || (str[i] == '\r'))
@@ -42,7 +42,7 @@ int		ft_atoi(const char *str)
 	nbr = 0;
 	neg = 0;
 	i = 0;
-	i = whilefunc(str, i);
+	i = ft_whilefunc(str, i);
 	if (str[i] == '-')
 	{
 		neg = 1;
@@ -57,5 +57,5 @@ int		ft_atoi(const char *str)
 		nbr += (int)str[i] - '0';
 		i++;
 	}
-	return (returnfunc(neg, nbr));
+	return (ft_returnfunc(neg, nbr));
 }

@@ -6,11 +6,11 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/11 12:34:29 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/11 12:54:59 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/12 20:53:31 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+int		ft_strlen3(char *str)
 {
 	int i;
 	int j;
@@ -25,23 +25,14 @@ int		ft_strlen(char *str)
 	return (j);
 }
 
-int ft_strcmp(char *s1, char *s2)
+int		ft_strcmp(char *s1, char *s2)
 {
-		int i;
-		int j;
+	int i;
 
-		i = ft_strlen(s1);
-		j = ft_strlen(s2);
-		if (i > j)
-		{
-			return (1);
-		}
-		else if (i = j)
-		{
-			return (0);
-		}
-		else if (i < j)
-		{
-			return (-1);
-		}
+	i = 0;
+	while (s1[1] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
+	{
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }

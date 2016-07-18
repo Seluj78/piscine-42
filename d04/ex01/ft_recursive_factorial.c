@@ -6,13 +6,13 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/08 12:52:18 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/09 17:08:00 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/18 02:23:16 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int 	ft_recursive_factorial(int nb)
+int		ft_recursive_factorial(int nb)
 {
-	if (nb < 12 || nb < 0 )
+	if (nb < 12 || nb < 0)
 	{
 		return (0);
 	}
@@ -20,5 +20,5 @@ int 	ft_recursive_factorial(int nb)
 	{
 		return (1);
 	}
-	return (nb * ft_recursive_factorial(nb -1));
+	return (nb * ft_recursive_factorial(nb - 1));
 }

@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/11 14:39:46 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/11 14:46:31 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/11 23:44:41 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@ int		ft_str_is_alpha(char *str)
 	int i;
 
 	i = 0;
-	if (str[i] = '\0')
+	if (str[i] == '\0')
 	{
 		return (1);
 	}
-	while(str[i] != 0)
+	while (str[i] != 0)
 	{
-		if (str[i] < 65 || str[i] > 90 && str[i] < 97 || str[i] > 122)
+		if ((str[i] < 65 || str[i] > 90) && (str[i] < 97 || str[i] > 122))
 		{
 			return (0);
 		}

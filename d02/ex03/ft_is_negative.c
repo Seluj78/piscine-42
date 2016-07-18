@@ -6,13 +6,13 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/06 15:25:50 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/06 18:26:10 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/18 02:27:58 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void ft_is_negative(int n)
+void	ft_is_negative(int n)
 {
 	if (n >= 0)
 	{

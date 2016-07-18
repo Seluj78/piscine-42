@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/13 13:23:24 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/14 13:13:12 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/18 02:35:09 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,20 @@ int		ft_ultimate_range(int **range, int min, int max)
 	i = 0;
 	if (min >= max)
 	{
-		range = NULL;
-		return (NULL);
+		range = 0;
+		return (0);
 	}
 	array = malloc(sizeof(*array) * (max - min));
-	if (array = NULL)
+	if (array == 0)
 	{
-		range = NULL;
-		return (NULL);
+		range = 0;
+		return (0);
 	}
 	while (i < (max - min))
 	{
 		array[i] = min + i;
 		i++;
 	}
-	range = array;
+	range = &array;
 	return (max - min);
 }

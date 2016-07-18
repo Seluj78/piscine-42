@@ -6,12 +6,11 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/13 18:22:29 by jlasne            #+#    #+#             */
-/*   Updated: 2016/07/14 13:16:51 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/14 22:09:08 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
 int		ft_strlen(char *str)
 {
@@ -61,10 +60,4 @@ char	*ft_concat_params(int argc, char **argv)
 	}
 	all += '\n';
 	return (all);
-}
-
-int		main(int argc, char **argv)
-{
-	printf("%s", ft_concat_params(argc, argv));
-	return (0);
 }
