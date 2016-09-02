@@ -6,16 +6,21 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/07 13:33:36 by jlasne            #+#    #+#             */
-/*   Updated: 2016/09/03 01:37:28 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/07/08 15:28:53 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_strlen(char *str)
 {
 	int i;
+	int j;
 
 	i = 0;
-	while (str[i] != '\0')
+	j = 0;
+	while (str[i] != 0)
+	{
 		i++;
-	return (i);
+		j++;
+	}
+	return (j);
 }
