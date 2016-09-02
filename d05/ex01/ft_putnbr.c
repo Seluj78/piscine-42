@@ -12,37 +12,21 @@
 
 void	ft_putchar(char c);
 
-void	ft_putstr2(char *str)
+void	ft_putnbr(int n)
 {
-	int i;
+	long nbr;
 
-	i = 0;
-	while (str[i] != 0)
+	nbr = n;
+	if (nbr < 0)
 	{
-		ft_putchar(str[i]);
-		i++;
+		write(1, "-", 1);
+		nbr = -nbr;
 	}
-}
-
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
+	if (nbr >= 10)
 	{
-		ft_putstr2("-2147483648");
-		return ;
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10);
 	}
-	if (nb < 0)
-	{
-		nb = nb * -1;
-		ft_putchar('-');
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else if (nb <= 9 && nb >= 0)
-	{
-		ft_putchar(nb + '0');
-	}
+	else
+		ft_putchar(nbr + 48);
 }
